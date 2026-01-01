@@ -15,4 +15,5 @@ TODO: Create basic MySQL projects to eventually build a database
 
 **React**
 12/31/2025
-Basics of React - currently writing preramble
+Basics of React - currently writing preramble in Javascript notes required for React
+TODO: Basic projects, states and combine with Ruby
