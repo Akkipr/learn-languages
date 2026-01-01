@@ -124,3 +124,20 @@ function fetchUserData() {
 console.log(fetchUserData()); // User data fetched
 // Doing console.log(fetchUserData2()); gives you "Promise { 'User data fetched1' }", so we must use .then or await since the type returned is Promise<String>
 
+
+
+// await - only used inside an async func to pause the execution until a Promise is resolved
+async function getStuff() {
+    try {
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon/pikachu");
+        const data = await response.json();
+        console.log(data);
+    } catch (err) {
+        console.error(err);
+    }
+}
+getStuff();
+
+//think of await being the replacement for .then();
+// the try/catch is there to be the replacement of .catch();
+// resolve() = return and reject() = throw new Error("oh nah");
