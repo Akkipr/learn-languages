@@ -96,3 +96,8 @@ myPromise.then(() => console.log("success")).catch(() => console.log("error"));
 
 // the same thing can be done with files;
 fs.promises.readFile(filePath, {encoding: 'utf-8'}).then((data) => console.log(data)).catch((err) => console.log(err));
+
+// fetch can also use promises
+fetch("https://pokeapi.co/api/v2/pokemon/pikachu").then(response => response.json())
+  .then(data => console.log(data))  // Work with the parsed data
+  .catch(error => console.error('Error fetching data:', error));
