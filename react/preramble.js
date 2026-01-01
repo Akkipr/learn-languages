@@ -46,3 +46,16 @@ const person2 = {...person, name: "Jack"};
 // Copy arrays
 const lists = [10,20,30];
 const list2 = [...lists, 40];
+
+// three fundamental arrays methods: map, filter, reduce. Reduce is not rlly used in React
+let names = ["Pedro", "Marlon", "Dexter"];
+
+names.map((name) => {
+    return name + "1";        // every element is the name with 1 added at the end
+    // return <h1>{name}</h1>
+});
+
+names.filter((name) => {
+    return name != "Pedro";        // removes all the Pedro in the names
+    // return <h1>{name}</h1>
+});
