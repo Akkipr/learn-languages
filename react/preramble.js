@@ -80,3 +80,19 @@ fs.readFile(filePath, {encoding: 'utf-8'}, (err, data) => {
     }
     console.log(data);
 });
+
+//Promises, evolution of the callback
+// resolve and reject, and you call each accordingly based on how the code works
+// act as a placeholder for a value that will be available in the future
+const myPromise = new Promise((resolve, reject) => {
+    const random = Math.floor(Math.random() * 2);
+    if (random == 0) {
+        resolve();
+    }
+    reject();
+
+})
+myPromise.then(() => console.log("success")).catch(() => console.log("error"));
+
+// the same thing can be done with files;
+fs.promises.readFile(filePath, {encoding: 'utf-8'}).then((data) => console.log(data)).catch((err) => console.log(err));
