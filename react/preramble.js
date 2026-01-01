@@ -59,3 +59,24 @@ names.filter((name) => {
     return name != "Pedro";        // removes all the Pedro in the names
     // return <h1>{name}</h1>
 });
+
+// async await and fetch
+// This is to work with APIs (to request data from the API) and fetch (get data specific ways)
+
+// callbacks 
+setTimeout(() => {
+    console.log("waited 1 second"); // this is the most simple async callback, js waits for one second before executing the message.
+}, 1000);
+
+// error first callback (also reading files in JS)
+const fs = require('fs');
+const path = require('path'); 
+const filePath = path.join(__dirname, 'test.txt');  // /Users/aks/Downloads/learn-languages/react/test.txt
+
+fs.readFile(filePath, {encoding: 'utf-8'}, (err, data) => {
+    if (err) {
+        console.error('Error reading file:', err); // Log the error details
+        return;
+    }
+    console.log(data);
+});
