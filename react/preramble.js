@@ -12,6 +12,8 @@ export const DoSomething = () => {
 
 */
 
+/*
+
 export const DoSomething = () => {
 
 }
@@ -101,3 +103,24 @@ fs.promises.readFile(filePath, {encoding: 'utf-8'}).then((data) => console.log(d
 fetch("https://pokeapi.co/api/v2/pokemon/pikachu").then(response => response.json())
   .then(data => console.log(data))  // Work with the parsed data
   .catch(error => console.error('Error fetching data:', error));
+
+// async operations are tasks running in the background, allowing the main program to continue executing without waiting for these tasks to complete.
+// async and await are the modern intepretations of this
+
+// async - keyword to declare an async func
+// This function pretty much is a substitute for the Promise (basically wraps around and it always returns a Promise)
+*/
+//currently:
+async function fetchUserData2() {
+  return "User data fetched1";
+}
+// calling the function returns a Promise
+fetchUserData2().then(console.log); // User data fetched1
+
+// Both the function above and below are intuitively the same since there is no await involved.
+function fetchUserData() {
+  return "User data fetched";
+}
+console.log(fetchUserData()); // User data fetched
+// Doing console.log(fetchUserData2()); gives you "Promise { 'User data fetched1' }", so we must use .then or await since the type returned is Promise<String>
+
