@@ -12,3 +12,7 @@ TODO: Use Golang and to make a Postgre database server
 09/13/2025
 All things SQL - currently writing notes and using a MySQL server
 TODO: Create basic MySQL projects to eventually build a database
+
+**React**
+12/31/2025
+Basics of React - currently writing preramble
