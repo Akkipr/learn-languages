@@ -128,3 +128,40 @@ text</p>
     document.getElementById("output").innerHTML = "<h2>hello</h2>"; //changes the inner HTML of the div with id "output"
   }
 </script>
+
+<!-- Forms in HTML, they are used to collect user input -->
+ <form>
+    <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="spongebob"> <!-- text field in a box with label Name, the id is the specific reference to it while think of name="name" to be a variable name, spongebob is the grey placebolder-->
+    </div>
+
+    <br><br>
+
+    <div>
+    <label for="email">Email:</label> <!--the for in the label allows us to click the label to trigger the input box-->
+    <input type="email" id="email" name="email" required> <!-- email field, must have the @ symbol-->
+    </div>
+    <br><br>
+
+    <!--type can also be password where it will be hidden. number is also a type where you can incremement and decrement. date is a type with a cool calender. radio is also another type for specific buttons, you must have multiple radio buttons under the same name="radiobt" so that you can only select 1-->
+    <!--maxlength can also be an attribute, maxlength=12 means that's the longest your input can be-->
+    <!--you can have min and max attributes for the number attribute -->
+
+    <input type="submit" value="Submit"> <!-- submit button-->
+    <input type="reset" value="Submit"> <!-- reset button-->
+
+    <!-- In order to actually send the data to something when you click submit, you must enter the action attribute in the form with some programming language-->
+    <form action="action.php" method="GET">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required> <!-- required makes it so you have to fill it out-->
+        <input type="submit" value="Submit">
+
+        <!--Here the GET method, the info gets posted in the URL, not super safe icl-->
+        <!--Good for search boxes for GET, use POST for secure information-->
+
+
+    </form>
+
+
+ </form>
