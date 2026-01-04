@@ -101,3 +101,30 @@ text</p>
     <dt>HTML</dt>
     <dd>This adds structure to a webpage</dd>
 </dl>
+
+<!--Span tags are used to apply inline styles or attributes to a portion of text within a paragraph or other block-level element. Good for text formatting and styling.-->
+<p>This is a <span style="color: red; font-weight: bold;">highlighted</span> word in a paragraph.</p>
+
+<!--Div tags are used to group elements together for styling or layout purposes. This is good for setting background colors.-->
+<div style="background-color: lightblue; padding: 10px;">
+    <h2>This is a div container</h2>
+    <p>This paragraph is inside a div.</p>
+</div>
+
+<!-- Meta tags, they are used to provide metadata about the HTML document and config settings essentially -->
+<meta charset="UTF-8"> <!--specifies the character encoding for the HTML document, can be ASCII but don't do that-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="This is a sample webpage for learning HTML.">
+<meta http-equiv="refresh" content="30"> <!--refreshes the page every 30 seconds-->
+
+<!--Buttons in HTML-->
+<button onclick="alert('Button clicked!')">Click Me</button>
+<!--onclick is an event attribute that triggers a JavaScript function when the button is clicked--> 
+<button onclick="doSomething()">Click Me</button>
+<div id="output"></div>
+
+<script>
+  function doSomething() {
+    document.getElementById("output").innerHTML = "<h2>hello</h2>"; //changes the inner HTML of the div with id "output"
+  }
+</script>
